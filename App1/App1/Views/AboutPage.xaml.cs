@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App1.Views
+namespace PasswordManager.Views
 {
     public partial class AboutPage : ContentPage
     {

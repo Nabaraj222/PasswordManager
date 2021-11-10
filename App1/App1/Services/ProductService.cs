@@ -1,11 +1,11 @@
-﻿using App1.Models;
+﻿using PasswordManager.Models;
 using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App1.Services
+namespace PasswordManager.Services
 {
     public class ProductService : IProductRepository
     {

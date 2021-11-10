@@ -1,8 +1,8 @@
-﻿using App1.ViewModels;
+﻿using PasswordManager.ViewModels;
 using System.ComponentModel;
 using Xamarin.Forms;
 
-namespace App1.Views
+namespace PasswordManager.Views
 {
     public partial class ItemDetailPage : ContentPage
     {

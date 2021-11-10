@@ -1,12 +1,12 @@
-﻿using App1.Models;
-using App1.Services;
+﻿using PasswordManager.Models;
+using PasswordManager.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
-namespace App1.ViewModels
+namespace PasswordManager.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

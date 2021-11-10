@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace App1.Models
+namespace PasswordManager.Models
 {
     public class Item
     {

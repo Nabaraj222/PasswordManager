@@ -1,10 +1,10 @@
-﻿using App1.Models;
+﻿using PasswordManager.Models;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace App1.ViewModels
+namespace PasswordManager.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel

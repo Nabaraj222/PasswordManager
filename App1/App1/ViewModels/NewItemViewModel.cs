@@ -1,11 +1,11 @@
-﻿using App1.Models;
+﻿using PasswordManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace App1.ViewModels
+namespace PasswordManager.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {

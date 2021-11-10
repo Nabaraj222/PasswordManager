@@ -1,11 +1,11 @@
-﻿using App1.Services;
-using App1.Views;
+﻿using PasswordManager.Services;
+using PasswordManager.Views;
 using System;
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App1
+namespace PasswordManager
 {
     public partial class App : Application
     {

@@ -1,10 +1,10 @@
-﻿using App1.ViewModels;
-using App1.Views;
+﻿using PasswordManager.ViewModels;
+using PasswordManager.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace App1
+namespace PasswordManager
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

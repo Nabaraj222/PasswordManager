@@ -1,12 +1,12 @@
-﻿using App1.Models;
-using App1.ViewModels;
+﻿using PasswordManager.Models;
+using PasswordManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App1.Views
+namespace PasswordManager.Views
 {
     public partial class NewItemPage : ContentPage
     {

@@ -1,6 +1,6 @@
-﻿using App1.Models;
-using App1.ViewModels;
-using App1.Views;
+﻿using PasswordManager.Models;
+using PasswordManager.ViewModels;
+using PasswordManager.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App1.Views
+namespace PasswordManager.Views
 {
     public partial class ItemsPage : ContentPage
     {

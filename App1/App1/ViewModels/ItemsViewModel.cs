@@ -1,12 +1,12 @@
-﻿using App1.Models;
-using App1.Views;
+﻿using PasswordManager.Models;
+using PasswordManager.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace App1.ViewModels
+namespace PasswordManager.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

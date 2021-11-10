@@ -1,10 +1,10 @@
-﻿using App1.Views;
+﻿using PasswordManager.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace App1.ViewModels
+namespace PasswordManager.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
