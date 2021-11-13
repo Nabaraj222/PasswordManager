@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PasswordManager.ViewModels"
+             xmlns:model="clr-namespace:PasswordManager.Models"
+             x:Class="PasswordManager.Views.ProductPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddProductCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <RefreshView x:DataType="local:ProductViewModel" Command="{Binding LoadProductCommand}">
+                <CollectionView
+                    ItemsSource="{Binding ProductInfos}"
+                    SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout x:DataType="model:ProductInfo">
+                                <StackLayout Orientation = "Horizontal">
+                                    <Image Grid.RowSpan="2" Source="{Binding ImageUrl}"></Image>
+                                    <StackLayout>
+                                        <Label Grid.Column="1" Text="{Binding ProductName}" FontAttributes="Bold"></Label>
+                                        <Label Grid.Column="1" Text="{Binding Description}" VerticalOptions="End"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
