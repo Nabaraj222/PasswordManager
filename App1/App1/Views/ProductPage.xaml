@@ -9,20 +9,26 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <RefreshView x:DataType="local:ProductViewModel" Command="{Binding LoadProductCommand}">
+            <RefreshView x:DataType="local:ProductViewModel" Command="{Binding LoadProductCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
                 <CollectionView
                     ItemsSource="{Binding ProductInfos}"
                     SelectionMode="None">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout x:DataType="model:ProductInfo">
-                                <StackLayout Orientation = "Horizontal">
-                                    <Image Grid.RowSpan="2" Source="{Binding ImageUrl}"></Image>
-                                    <StackLayout>
-                                        <Label Grid.Column="1" Text="{Binding ProductName}" FontAttributes="Bold"></Label>
-                                        <Label Grid.Column="1" Text="{Binding Description}" VerticalOptions="End"></Label>
-                                    </StackLayout>
-                                </StackLayout>
+                                <Grid Padding="5">
+                                    <Frame CornerRadius="10" HasShadow="True">
+                                        <StackLayout Orientation = "Horizontal">
+                                            <StackLayout>
+                                                <Label Grid.Column="1" Text="{Binding ProductName}" FontAttributes="Bold"></Label>
+                                                <Label Grid.Row ="1" Grid.Column="1" Text="{Binding Description}" VerticalOptions="End"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <!--<StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                            <Image Source="edit.Png" Grid.Column="3" HeightRequest="20" WidthRequest="20" VerticalOptions="End"></Image>
+                                        </StackLayout>-->
+                                    </Frame>
+                                </Grid>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

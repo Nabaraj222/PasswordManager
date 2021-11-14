@@ -1,12 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PasswordManager.ViewModels"
              x:Class="PasswordManager.Views.AddProductPage">
+    <ContentPage.BindingContext>
+        <local:AddProductViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="5" Padding="15">
+            <Label Text="Id" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding ProductInfo.ProductId, Mode=TwoWay}" FontSize="Medium"  IsEnabled="False"/>
+            <Label Text="Name" FontSize="Medium" />
+            <Entry Text="{Binding ProductInfo.ProductName, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Description" FontSize="Medium" />
+            <Editor Text="{Binding ProductInfo.Description, Mode=TwoWay}" FontSize="Medium" AutoSize="TextChanges" Margin="0" />
+            <Label Text="ImageUrl" FontSize="Medium" />
+            <Editor Text="{Binding ProductInfo.ImageUrl, Mode=TwoWay}" FontSize="Medium" AutoSize="TextChanges" Margin="0" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
