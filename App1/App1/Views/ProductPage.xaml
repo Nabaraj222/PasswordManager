@@ -23,10 +23,14 @@
                                                 <Label Grid.Column="1" Text="{Binding ProductName}" FontAttributes="Bold"></Label>
                                                 <Label Grid.Row ="1" Grid.Column="1" Text="{Binding Description}" VerticalOptions="End"></Label>
                                             </StackLayout>
+                                            <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                                <Image Source="edit.Png" Grid.Column="3" HeightRequest="20" WidthRequest="20" VerticalOptions="End">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding Source={RelativeSource AncestorType={x:Type local:ProductViewModel}},Path=ProductTappedEdit}" CommandParameter="{Binding .}"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
                                         </StackLayout>
-                                        <!--<StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
-                                            <Image Source="edit.Png" Grid.Column="3" HeightRequest="20" WidthRequest="20" VerticalOptions="End"></Image>
-                                        </StackLayout>-->
                                     </Frame>
                                 </Grid>
                             </StackLayout>

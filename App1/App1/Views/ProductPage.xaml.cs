@@ -17,7 +17,7 @@ namespace PasswordManager.Views
         public ProductPage()
         {   
             InitializeComponent();
-            BindingContext = productViewModel = new ProductViewModel();
+            BindingContext = productViewModel = new ProductViewModel(Navigation);
         }
         protected override void OnAppearing()
         {

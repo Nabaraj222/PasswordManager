@@ -20,5 +20,14 @@ namespace PasswordManager.Views
             InitializeComponent();
             BindingContext = new AddProductViewModel();
         }
+        public AddProductPage(ProductInfo productInfo)
+        {
+            InitializeComponent();
+            BindingContext = new AddProductViewModel();
+            if(productInfo != null)
+            {
+                BindingContext = productInfo;
+            }
+        }
     }
 }

@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Xamarin.Forms;
 
 namespace PasswordManager.ViewModels
 {
     public class BaseProductViewModel : INotifyPropertyChanged
     {
         public ProductInfo _productInfo;
+        public INavigation Navigation { get; set; }
         public ProductInfo ProductInfo
         {
             get { return _productInfo; }

@@ -15,11 +15,16 @@ namespace PasswordManager.ViewModels
         public ObservableCollection<ProductInfo> ProductInfos { get; }
 
         public Command AddProductCommand { get; }
-        public ProductViewModel()
+
+        public Command ProductTappedEdit { get; }
+        public ProductViewModel(INavigation _navigation)
         {
             LoadProductCommand = new Command(async () => await ExecuteLoadProductCommand());
             ProductInfos = new ObservableCollection<ProductInfo>();
             AddProductCommand = new Command(OnAddProduct);
+            ProductTappedEdit = new Command<ProductInfo>(OnEditProduct);
+            Navigation = _navigation;   
+
         }
 
         async Task ExecuteLoadProductCommand()
@@ -51,6 +56,10 @@ namespace PasswordManager.ViewModels
         private async void OnAddProduct(Object obj)
         {
            await Shell.Current.GoToAsync(nameof(AddProductPage));
+        }
+        private async void OnEditProduct(ProductInfo product)
+        {
+            await Navigation.PushAsync(new AddProductPage(product));
         }
     }
 }
